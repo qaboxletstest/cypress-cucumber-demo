@@ -1,0 +1,5 @@
+{
+    "baseUrl": "http://localhost:3000/",
+    "experimentalSessionSupport": true,
+    "testFiles": "**/*.feature"
+}
