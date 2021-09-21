@@ -30,6 +30,23 @@ Configure the plugin to use the Cypress Cucumber Preprocessor Style pattern for 
 }
 ```
 
+If working on Typescript then
+a) `npm install typescript tsify` if not already done.
+b) add the following code in `cypress/plugins/index.ts`
+```
+  const cucumber = require("cypress-cucumber-preprocessor").default;
+  const browserify = require("@cypress/browserify-preprocessor");
+
+  module.exports = (on) => {
+    const options = browserify.defaultOptions;
+
+    options.browserifyOptions.plugin.unshift(['tsify']);
+    // Or, if you need a custom tsconfig.json for your test files:
+    // options.browserifyOptions.plugin.unshift(['tsify', {project: 'path/to/other/tsconfig.json'}]);
+
+    on("file:preprocessor", cucumber(options));
+  };
+```
 
 2.  What is covered here? - By no means this project is covering the complete Cucumber; rather it is only scratching the surface. So, topics covered are: -
     1. How to organize the tests?
