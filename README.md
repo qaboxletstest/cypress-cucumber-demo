@@ -16,7 +16,32 @@ module.exports = (on, config) => {
 
 Add support for feature files to your Cypress configuration by add the following in `cypress.json`
 
-2.  
+```
+"testFiles": "**/*.feature"
+```
+
+Configure the plugin to use the Cypress Cucumber Preprocessor Style pattern for placing step definitions files by adding the following in `package.json`
+
+```
+"cypress-cucumber-preprocessor": {
+  "nonGlobalStepDefinitions": true
+}
+```
+
+
+2.  What is covered in the examples? 
+
+By no means this project is covering the complete Cucumber; rather it is only scratching the surface. So, topics covered are: -
+    * How to organize the tests 
+        * Put your feature files in cypress/integration/
+        * Create one folder in cypress/integration/ for each feature files with the same name of feature file. Because the .feature file will use steps definitions from a directory with the same name as your .feature file. 
+        *  The javascript/typescript files containing the step definitions can have other names if you want to break them into different concerns.
+    * Feature Files (Feature, Scenario, Given , When, Then, And)
+    * Step Definition Files (Given , When, Then, And, Before, After)
+    * Cucumber Expression and Parameter types
+    * Data table 
+    * Background Scenario
+    * Tags - with NOT, AND and OR
 
 ## Install Dependencies
 
