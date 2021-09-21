@@ -30,16 +30,16 @@ Configure the plugin to use the Cypress Cucumber Preprocessor Style pattern for 
 
 
 2.  What is covered here? - By no means this project is covering the complete Cucumber; rather it is only scratching the surface. So, topics covered are: -
-  1. How to organize the tests 
-    - Put your feature files in cypress/integration/
-    - Create one folder in cypress/integration/ for each feature files with the same name of feature file. Because the .feature file will use steps definitions from a directory with the same name as your .feature file. 
-    - The javascript/typescript files containing the step definitions can have other names if you want to break them into different concerns.
-  2. Feature Files (Feature, Scenario, Given , When, Then, And)
-  3. Step Definition Files (Given , When, Then, And, Before, After)
-  4. Cucumber Expression and Parameter types
-  5. Data table 
-  6. Background Scenario
-  7. Tags - with NOT, AND and OR
+    1. How to organize the tests 
+      - Put your feature files in cypress/integration/
+      - Create one folder in cypress/integration/ for each feature files with the same name of feature file. Because the .feature file will use steps definitions from a directory with the same name as your .feature file. 
+      - The javascript/typescript files containing the step definitions can have other names if you want to break them into different concerns.
+    2. Feature Files (Feature, Scenario, Given , When, Then, And)
+    3. Step Definition Files (Given , When, Then, And, Before, After)
+    4. Cucumber Expression and Parameter types
+    5. Data table 
+    6. Background Scenario
+    7. Tags - with NOT, AND and OR
 
 ## Install Dependencies
 
