@@ -64,21 +64,21 @@ Configure the plugin to use the Cypress Cucumber Preprocessor Style pattern for 
     ```
     2. Add cucumber-html-reporter Plugin for converting the JSON output to HTML report `npm i --save-dev cucumber-html-reporter`. After installation we need to have a .js file that can read your .json file and create an HTML report from it. So, let's create `cucumber-html-report.js` file at the root of your project and add the following code into it: -
     ```
-const report = require("multiple-cucumber-html-reporter");
-report.generate({
-    jsonDir: "cypress/reports/cucumber-json",  // ** Path of .json file **//
-    reportPath: "cypress/reports", // ** Path of .html file **//
-    metadata: {
-        browser: {
-            name: "chrome",
-            version: "92",
-        },
-        device: "Local test machine",
-        platform: {
-            name: "windows",
-            version: "10",
-        },
-    },
+      const report = require("multiple-cucumber-html-reporter");
+      report.generate({
+          jsonDir: "cypress/reports/cucumber-json",  // ** Path of .json file **//
+          reportPath: "cypress/reports", // ** Path of .html file **//
+          metadata: {
+              browser: {
+                  name: "chrome",
+                  version: "92",
+              },
+              device: "Local test machine",
+              platform: {
+                  name: "windows",
+                  version: "10",
+              },
+          },
 });
     ```
 
