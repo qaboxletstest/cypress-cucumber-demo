@@ -1,6 +1,8 @@
-# Getting Started with Cypress cy.session command
+# Cypress with Cucumber
 
-This project is created to show how we can login into an application programmatically; no more repetitions of login script. 
+This project is created to show how we can leverage Cucumber BDD framework in Cypress. Steps involved in configuring your project are following: -
+
+1. `Add cypress-cucumber-preprocessor Plugin`
 
 ## Install Dependencies
 

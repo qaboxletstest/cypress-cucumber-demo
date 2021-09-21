@@ -7,7 +7,7 @@ class ToDo {
         ToDo._instance = this;
         this.header = "h4.title-todo";
         this.task = "input[name='task']";
-        this.submit = "button#submit"
+        this.submit = "button[type='submit']"
     }
 
     get title() {
@@ -22,12 +22,16 @@ class ToDo {
         return cy.get(this.submit);
     }
 
+    findToDo(todo) {
+        return cy.contains("p", todo)
+    }
+
     selectToDo(todo) {
         cy.contains("p", todo).prev().children(':checkbox').click()
     }
 
     deleteToDo(todo) {
-        cy.contains("p", todo).parent().next().click()
+        cy.contains("p", todo).next().click()
     }
 }
 

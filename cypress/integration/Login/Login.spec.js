@@ -3,13 +3,13 @@ import { Given, When, Then, And, Before, After } from "cypress-cucumber-preproce
 import loginObj from "../Pages/Login"
 import homeObj from "../Pages/Home"
 
-// Before(() => {
-//     cy.log("Login Tests - Started")
-// });
+Before(() => {
+    cy.log("Login Tests - Started")
+});
 
-// After(() => {
-//     cy.log("Login Tests - Finished")
-// });
+After(() => {
+    cy.log("Login Tests - Finished")
+});
 
 Given("The Login Page is opened", () => {
     cy.visit("/")
@@ -31,26 +31,26 @@ And("Submit button is clicked", () => {
     loginObj.submitBtn.click()
 })
 
-Then(/^login request should give {string} Unauthorized status code$/, (_statusCode) => {
+Then("/login request should give {int} Unauthorized status code", (_statusCode) => {
     cy.wait("@login").then(res => {
-        expect(res.response.statusCode).to.eq(parseInt(_statusCode))
+        expect(res.response.statusCode).to.eq(_statusCode)
     })
 })
 
-// When("Valid Username and Password is entered", () => {
-//     loginObj.uname.type("adminS3rcet")
-//     loginObj.pwd.type("adminS3rcet")
-// })
+When("Valid Username and Password is entered", () => {
+    loginObj.uname.type(Cypress.env("username"))
+    loginObj.pwd.type(Cypress.env("password"))
+})
 
 
 
-// Then("/login request should give {int} status code", (_statusCode) => {
-//     cy.wait("@login").then(res => {
-//         expect(res.response.statusCode).to.eq(_statusCode)
-//     })
-// })
+Then("/login request should give {int} status code", (_statusCode) => {
+    cy.wait("@login").then(res => {
+        expect(res.response.statusCode).to.eq(_statusCode)
+    })
+})
 
-// And("Logout button should be enabled on the Home Page", () => {
-//     cy.url().should("contain", "/home")
-//     homeObj.logoutBtn.should("be.enabled")
-// })
+And("Logout button should be enabled on the Home Page", () => {
+    cy.url().should("contain", "/home")
+    homeObj.logoutBtn.should("be.enabled")
+})

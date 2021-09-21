@@ -15,9 +15,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cypress open",
+    "test:open": "cypress open",
     "eject": "react-scripts eject",
-    "start-server": "nodemon server.js"
+    "start-server": "nodemon server.js",
+    "test:qabox": "npx cypress-tags run --env \"TAGS=@qabox\"",
+    "clean:reports": "if exist cypress\\reports rmdir /S/Q cypress\\reports",
+    "pretest": "npm run clean:reports",
+    "scripts": "cypress run --browser chrome",
+    "posttest": "node cucumber-html-report.js",
+    "test": "npm run scripts || npm run posttest"
   },
   "eslintConfig": {
     "extends": [
@@ -41,9 +47,16 @@
     "cypress": "^8.4.0",
     "cypress-cucumber-preprocessor": "^4.2.0",
     "express": "^4.17.1",
+    "multiple-cucumber-html-reporter": "^1.18.0",
     "nodemon": "^2.0.12"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }

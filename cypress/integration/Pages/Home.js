@@ -19,7 +19,7 @@ class Home {
         return cy.get(this.logout);
     }
 
-    get backToHome() {
+    get backToHomeBtn() {
         return cy.get(this.homeback);
     }
 
