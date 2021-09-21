@@ -2,7 +2,21 @@
 
 This project is created to show how we can leverage Cucumber BDD framework in Cypress. Steps involved in configuring your project are following: -
 
-1. `Add cypress-cucumber-preprocessor Plugin`
+1. Add cypress-cucumber-preprocessor Plugin `npm install --save-dev cypress-cucumber-preprocessor` to Run cucumber/gherkin-syntaxed specs with cypress.io.
+
+To `cypress/plugins/index.js` add
+
+```
+const cucumber = require('cypress-cucumber-preprocessor').default
+
+module.exports = (on, config) => {
+  on('file:preprocessor', cucumber())
+}
+```
+
+Add support for feature files to your Cypress configuration by add the following in `cypress.json`
+
+2.  
 
 ## Install Dependencies
 
