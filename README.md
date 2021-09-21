@@ -59,8 +59,8 @@ Configure the plugin to use the Cypress Cucumber Preprocessor Style pattern for 
       "outputFolder": "cypress/reports/cucumber-json",
       "filePrefix": "",
       "fileSuffix": ".cucumber"
+      }
     }
-  }
     ```
     2. Add cucumber-html-reporter Plugin for converting the JSON output to HTML report `npm i --save-dev cucumber-html-reporter`. After installation we need to have a .js file that can read your .json file and create an HTML report from it. So, let's create `cucumber-html-report.js` file at the root of your project and add the following code into it: -
     ```
