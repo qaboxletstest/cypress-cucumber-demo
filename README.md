@@ -82,6 +82,7 @@ Configure the plugin to use the Cypress Cucumber Preprocessor Style pattern for 
       });
     ```
     3. Add the following code into `cypress/support/index.js` to attach screenshot of failed steps: -
+       Taken this from [here]("https://github.com/dane-harnett/cypress-cucumber-attach-screenshots-to-failed-steps")
       ```
         afterEach(() => {
             const screenshotsFolder = Cypress.config("screenshotsFolder");
