@@ -42,7 +42,7 @@ Configure the plugin to use the Cypress Cucumber Preprocessor Style pattern for 
     5. Usage of Data table 
     6. Usage of Background Scenario
     7. Usage of Tags (with NOT, AND and OR) - Execute on basis of tags - Examples added in the `script object inside package.json file`.
-    8. Usage of POM
+    8. Usage of POM (also covered singleton pattern in JavaScript)
 
 3. Generate Cucumber HTML report and attach screenshot of failed steps
     1. cypress-cucumber-preprocessor Plugin generates a cucumber.json file as an output. This output file contains the result of all our feature file execution. And using this JSON file only we are going to generate an HTML report. So, to make the cucumber plugin generate a JSON file output, we need to make some changes to our cypress cucumber properties. 
