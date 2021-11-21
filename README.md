@@ -56,7 +56,7 @@ b) add the following code in `cypress/plugins/index.ts`
     2. Example of Feature Files (Feature, Scenario, Given , When, Then, And)
     3. Example of Step Definition Files (Given , When, Then, And, Before, After)
     4. Usage of Cucumber Expression and Parameter types (int and string)
-    5. Usage of Data table 
+    5. Usage of Scenario Outline - Data table 
     6. Usage of Background Scenario
     7. Usage of Tags (with NOT, AND and OR) - Execute on basis of tags - Examples added in the `script object inside package.json file`.
     8. Usage of POM (also covered singleton pattern in JavaScript)
